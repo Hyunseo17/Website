@@ -1,0 +1,118 @@
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body .sidebar-space{
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-switch-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  right: 30px;
+  top: 12px;
+  position:fixed;
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: white;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+body.light-mode .title-name,
+body.light-mode .link-titles{
+  color: black;
+}
+
+body.dark-mode .title-name,
+body.dark-mode .link-titles{
+  color: rgb(255, 255, 255);
+}
+
+body.light-mode{
+  background-color: white;
+  color: rgb(0, 0, 0);
+}
+
+body.dark-mode {
+  background-color: rgb(77, 77, 77);
+  color: rgb(221, 221, 221);
+}
+
+body.light-mode .sidebar-space{
+  background-color: rgb(212, 212, 212);
+}
+
+body.dark-mode .sidebar-space{
+  background-color: rgb(59, 59, 59);
+}
+
+body.light-mode .college{
+  color: rgb(35, 35, 184);
+  cursor: pointer;
+}
+
+body.dark-mode .college{
+  color: rgb(224, 224, 29);
+  cursor: pointer;
+}
+
+body.light-mode .major{
+  color: rgb(140, 63, 240);
+}
+
+body.dark-mode .major{
+  color: rgb(132, 154, 255);
+}
